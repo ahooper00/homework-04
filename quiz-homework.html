@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Box Styling</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./quiz-homework.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="title">The Code Quiz!
+                <button id="start-button" class="start-button">Start the quiz</button>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <div class="timer-div">
+                    <div class="timer-text" class="timer-text">Time left
+                        <div class="timer-count" id="timer-count">20s</div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div id="question" class="question">
+                    <h4 id="question-title"></h4>
+                    <p id="question-text"></p>
+                    <div id="answer-options" type="a">
+                        <button id="a"></button>
+                        </br>
+                        <button id="b"></button>
+                        </br>
+                        <button id="c"></button>
+                        </br>
+                        <button id="d"></button>
+                    </div>
+                    <p id="score"></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+
+
+</body>
+
+
+<script src="quiz-homework.js"></script>
+
+</html>
