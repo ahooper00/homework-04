@@ -6,4 +6,6 @@ One question is shown at a time, and once an answer has been selected, the quest
 Once the last question has been answered, a score is given (between 0 and 5) for all of the correct answers selected, and the timer stops.
 If the questions are not all answered by the time the timer reaches 0, the quiz finishes and an alert shows.
 
+Link to deployed application: https://ahooper00.github.io/homework-04/ 
+
 ![Quiz screenshot](./Screenshot.png "Screenshot of my quiz")
