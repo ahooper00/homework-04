@@ -2,9 +2,6 @@ var startBtn = document.querySelector("#start-button");
 var timerEl = document.querySelector("#timer-count");
 var selectedAnswers = [];
 
-// const results = 
-// const submitButton = 
-
 // Need to have a sample of questions for the quiz
 const myQuestions = [
     {
@@ -60,7 +57,6 @@ const myQuestions = [
 ]
 
 // A start button will begin the countdown and show the quiz questions one by one
-// Once an answer is selected, the next question is shown
 startBtn.addEventListener("click", start)
 
 var timeLeft = 19;
@@ -83,12 +79,8 @@ function start() {
     showNextQuestion();
 }
 
+// Once an answer is selected, the next question is shown
 function showNextQuestion() {
-    // Get question info for 'currentQuestion'
-    // [a, b, c, d, e]
-    // myQuestions.length = 5
-    // currentQuestionIndex = 5
-    // myQuestions[currentQuestionIndex] = undefined
     if (currentQuestionIndex === undefined) {
         currentQuestionIndex = 0;
     } else if (currentQuestionIndex >= myQuestions.length - 1) {
@@ -106,6 +98,7 @@ function showNextQuestion() {
     document.querySelector('#d').innerText = currentQuestion["answers"]["d"];
 }
 
+// Gives a click event to all of the answer options
 document.querySelector("#a").addEventListener('click', function () {
     selectedAnswers.push("a");
     showNextQuestion();
@@ -130,7 +123,7 @@ function showResults() {
     var score = 0;
     // showResults() will validate whether or not the correctAnswer has been selected for each question.
     // if the correctAnswer has been selected, give 1 point; if it has not been selected, give 0 points.
-    // for statement
+    // final score given at the end
     for (var i = 0; i < myQuestions.length; i++) {
         var selectedAnswer = selectedAnswers[i];
         var question = myQuestions[i];
@@ -140,9 +133,3 @@ function showResults() {
     }
     document.querySelector("#score").innerHTML = "Your score is " + score + "!";
 }
-
-// Start button begins the quiz and count down.
-// When start button is pressed, the first question is shown with possible answers.
-// Once answer is selected, the next question is shown (either by clicking on the answer, or selecting a 'next' button).
-// Asnwers are saved, and a score is given at the end of the quiz.
-// If the time gets to 0 before the quiz is finished, the quiz ends.
